@@ -1,2 +1,0 @@
-# Votes System
- 
