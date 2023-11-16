@@ -308,9 +308,24 @@ img{
  margin-top: 10px;
  font-weight: 500;
  color: #fff;
-
  text-align: center;
  margin-top: 140px;
+}
+.bg_frame1{
+  width: 900px;
+  margin-top: 50px;
+  height: 100px;
+  background-color: #e7e7e7;
+ 
+  border-radius: 10px;
+}
+.bg_frame1 h2{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 10px;
+  position: absolute;
 }
 
 .content-about .h2{
