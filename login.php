@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = "localhost";  // Database host (usually localhost)
     $dbuser = "root";  // Your database username
     $dbpass = "";  // Your database password
-    $dbname = "db_voting";     // Your database name
+    $dbname = "votes";     // Your database name
 
     // Create a database connection
     $conn = new mysqli($host, $dbuser, $dbpass, $dbname);

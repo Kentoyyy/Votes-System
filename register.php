@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "db_voting";
+$dbname = "votes";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -49,8 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Hash the password for security
 
         // Prepare and execute the SQL query to insert data
-        $stmt = $conn->prepare("INSERT INTO users (first_name, last_name, contact, address, email, password) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, contact, address, email, password) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $firstname, $lastname, $contact, $address, $email, $password);
+
+        
 
         if ($stmt->execute()) {
             // Registration successful
@@ -60,6 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '<p>Contact: ' . $contact . '</p>';
             echo '<p>Address: ' . $address . '</p>';
             echo '<p>Email: ' . $email . '</p>';
+            
+            sleep(2);
+
+            header("Location: login.html");
+            exit();
         } else {
             // Registration failed
             echo '<p>Error: ' . $stmt->error . '</p>';

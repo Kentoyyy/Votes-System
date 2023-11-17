@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up - VOTES</title>
-  <link rel="stylesheet" href="assets/css/SignUp.css" > <link rel="stylesheet"
+  <link rel="stylesheet" href="css/SignUp.css" > <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -14,11 +14,11 @@
   <div class="leftcontainer" style="background: #289965; height: 615px; width: 250px; border-radius: 10px;">
     <div class="circle"
       style="width: 180px; height: 180px; margin-left: 30px; position: absolute; display: flex; margin-top: 10px; background: #ffff; border-radius: 380px;">
-      <img src="assets/img/phoneimg.png" class="phoneimg">
+      <img src="images/phoneimg.png" class="phoneimg">
     </div>
     <div class="frame-bg"
       style="height: 200px; width: 210px; margin-left: 20px;  border-radius: 10px; background: #fff; margin-top: 390px; position: absolute; display: flex;">
-      <img src="assets/img/imgreg.png" class="mgreg" style="width: 190px; height: 180px; margin-top:30px;">
+      <img src="images/imgreg.png" class="mgreg" style="width: 190px; height: 180px; margin-top:30px;">
     </div>
     <div class="framebg"
       style="height: 120px; width: 210px; margin-left: 20px;  border-radius: 10px; background: #fff; margin-top: 230px; position: absolute; display: flex;">
@@ -34,7 +34,7 @@
   </div>
 
   <div class="container">
-    <img src="assets/img/votes logo.png" class="logo">
+    <img src="images/votes logo.png" class="logo">
     <h2>Registration</h2>
     <h3>Page</h3>
 
@@ -43,39 +43,39 @@
     <form action="register.php" method="post">
     <div class="forms-input">
       <div class="input-field">
-        <input type="text" id="firstname" name="firstname" class="input" placeholder="Firstname" >
+        <input type="text" id="firstname" name="firstname" class="input" placeholder="Firstname" required>
         <i class="fa fa-user"></i>
       </div>
       <div class="input-field">
-        <input type="text" id="lastname" name="lastname" class="inputlastname" placeholder="Lastname" >
+        <input type="text" id="lastname" name="lastname" class="inputlastname" placeholder="Lastname" required>
         <i class="fa fa-user"></i>
       </div>
       <div class="input-field">
-        <input type="text" id="email" name="email" class="inputemail" placeholder="Email" >
+        <input type="text" id="email" name="email" class="inputemail" placeholder="Email" required>
         <i class="fa fa-user"></i>
       </div>
       <div class="input-field">
-        <input type="number" id="contact" name="contact" class="inputnumber" placeholder="Contact Number" maxlength="5" >
+        <input type="number" id="contact" name="contact" class="inputnumber" placeholder="Contact Number" maxlength="5" required>
         <i class="fa fa-user"></i>
       </div>
       <div class="input-field">
-        <input type="text" id="address" name="address" class="inputaddress" placeholder="Address" >
+        <input type="text" id="address" name="address" class="inputaddress" placeholder="Address" required>
         <i class="fa fa-user"></i>
       </div>
       <div class="input-field">
-        <input type="password" id="password" name="password" class="inputpassword" placeholder="Password" >
+        <input type="password" id="password" name="password" class="inputpassword" placeholder="Password" required>
         <i class="fa fa-user"></i>
       </div>
       <div class="input-field">
-        <input type="password" id="password2" name="password2" class="inputconfirmpassword" placeholder="Confirm Password" >
+        <input type="password" id="password2" name="password2" class="inputconfirmpassword" placeholder="Confirm Password" required>
         <i class="fa fa-user"></i>
       </div>
 
       <div class="input-field">
-        <input type="submit" class="signupbtn" value="Sign Up">
+      <input type="submit" class="signupbtn" value="Sign Up">
       </div>
       <div class="input-field">
-        <input type="button" class="btnCencel" onclick="location.href='login.html';" value="Cancel"></div>
+        <input type="button" class="cancelbtn" value="Cancel">
       </div>
 
     </div>
