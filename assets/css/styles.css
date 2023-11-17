@@ -502,10 +502,10 @@ img{
   padding: 0 1.5rem;
 }
 .services__content .left-container{
-  width: 500px;
+  width: 530px;
   border-radius: 10px;
   height: 500px;
-  margin-left: -50px;
+  margin-left: -90px;
   position: relative;
   background-color: #e7e7e7;
 }
@@ -516,21 +516,145 @@ img{
   
   position: absolute;
   margin-left: 165px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: 'Poppins' sans-serif;
   font-style: bold;
 }
 .left-container p{
   font-size: 13px;
-  color: #289965;
+  color: #048654;
   font-weight: 400;
-
+  border-radius: 8px;
   position: absolute;
   margin-left: 65px;
-  margin-top: 55px;
+  margin-top: 45px;
   font-family: 'Poppins' sans-serif;
   font-style: bold;
 }
+
+/*=======PREsident FRAME========*/
+.BG-Pres{
+  width: 230px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 75px;
+  position: absolute;
+  border-radius: 8px;
+  background-color: #289965;
+}
+
+
+.BG-Pres h2{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 15px;
+  font-family: 'Poppins';
+  color: #fff;
+  
+}
+.users-candidates i{
+  font-size: 20px;
+  position: absolute;
+  margin-left: -230px;
+  margin-top: 150px;
+}
+.users-candidates h3{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 150px;
+}
+
+.users-candidates1 i{
+  font-size: 20px;
+  position: absolute;
+  margin-left: -230px;
+  margin-top: 190px;
+}
+.users-candidates1 h3{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 190px;
+}
+.users-candidates2 i{
+
+  font-size: 20px;
+  position: absolute;
+  margin-left: -230px;
+  margin-top: 230px;
+}
+.users-candidates2 h3{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 230px;
+}
+
+/*=======VP FRAME========*/
+.BG-VPres{
+  width: 230px;
+  height: 50px;
+  margin-left: 280px;
+  margin-top: 75px;
+  position: absolute;
+  border-radius: 8px;
+  background-color: #289965;
+}
+.BG-VPres h2{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 60px;
+  margin-top: 15px;
+  font-family: 'Poppins';
+  color: #fff;
+  
+}
+.users-vcandidates i{
+  font-size: 20px;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 150px;
+}
+.users-vcandidates h3{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 150px;
+}
+
+.users-vcandidates1 i{
+  font-size: 20px;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 190px;
+}
+.users-vcandidates1 h3{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 190px;
+}
+.users-vcandidates2 i{
+
+  font-size: 20px;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 230px;
+}
+.users-vcandidates2 h3{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 230px;
+}
+
+
+
+
+
+
 
 /*========== MENU ==========*/
 .menu__container{
