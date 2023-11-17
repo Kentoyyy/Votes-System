@@ -651,6 +651,7 @@ img{
   margin-top: 230px;
 }
 
+/* RIGHT CONTIANER FOR PARTYLIST */
 .services__content .right-container{
   width: 530px;
   border-radius: 10px;
@@ -701,6 +702,23 @@ img{
   color: #fff;
   
 }
+.bg-user{
+  width: 80px;
+  height: 70px;
+  border-radius: 4px;
+  margin-top: 150px;
+  margin-left: 50px;
+  position: absolute;
+  background-color: #A9382A;
+}
+.bg-user i{
+  font-size: 30px;
+  position: absolute;
+
+  margin-left: -13px;
+  margin-top: 20px;
+}
+
 
 /*=======PREsident FRAME========*/
 .BG-Pres{
@@ -723,6 +741,7 @@ img{
   color: #fff;
   
 }
+
 
 
 
