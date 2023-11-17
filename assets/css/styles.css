@@ -718,9 +718,87 @@ img{
   margin-left: -13px;
   margin-top: 20px;
 }
+.partylist-aksyon h2{
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 230px;
+  margin-left: 75px;
+}
+.partylist-aksyon p{
+  font-size: 13px;
+  font-weight: 700;
+  font-style: bold;
+  color: #707070;
+  margin-top: 260px;
+  margin-left: 50px;
+}
+
+.bg-user1{
+  width: 80px;
+  height: 70px;
+  border-radius: 4px;
+  margin-top: 150px;
+  margin-left: 230px;
+  position: absolute;
+  background-color: #A9382A;
+}
+.bg-user1 i{
+  font-size: 30px;
+  position: absolute;
+  margin-left: -13px;
+  margin-top: 20px;
+}
+.partylist-aksyon1 h2{
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 230px;
+  margin-left: 255px;
+}
+.partylist-aksyon1 p{
+  font-size: 13px;
+  font-weight: 700;
+  font-style: bold;
+  color: #707070;
+  margin-top: 260px;
+  margin-left: 225px;
+}
+
+.bg-user2{
+  width: 80px;
+  height: 70px;
+  border-radius: 4px;
+  margin-top: 150px;
+  margin-left: 400px;
+  position: absolute;
+  background-color: #A9382A;
+}
+.bg-user2 i{
+  font-size: 30px;
+  position: absolute;
+  margin-left: -13px;
+  margin-top: 20px;
+}
+.partylist-aksyon2 h2{
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 230px;
+  margin-left: 425px;
+}
+.partylist-aksyon2 p{
+  font-size: 13px;
+  font-weight: 700;
+  font-style: bold;
+  color: #707070;
+  margin-top: 260px;
+  margin-left: 400px;
+}
 
 
-/*=======PREsident FRAME========*/
+
+/*=======PRESIDENT FRAME========*/
 .BG-Pres{
   width: 230px;
   height: 50px;
