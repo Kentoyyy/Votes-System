@@ -506,8 +506,9 @@ img{
   border-radius: 10px;
   height: 500px;
   margin-left: -90px;
-  position: relative;
-  background-color: #e7e7e7;
+  position: absolute;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
 }
 .left-container h2{
   font-size: 20px;
@@ -650,6 +651,79 @@ img{
   margin-top: 230px;
 }
 
+.services__content .right-container{
+  width: 530px;
+  border-radius: 10px;
+  height: 500px;
+  margin-left: 490px;
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
+}
+
+.right-container h2{
+  font-size: 20px;
+  color: #A9382A;
+  font-weight: 700;
+  
+  position: absolute;
+  margin-left: 165px;
+  margin-top: 10px;
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+}
+.right-container p{
+  font-size: 13px;
+  color: #A9382A;
+  font-weight: 400;
+  border-radius: 8px;
+  position: absolute;
+  margin-left: 65px;
+  margin-top: 45px;
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+}
+.BG-PARTLIST{
+  width: 250px;
+  height: 50px;
+  margin-left: 130px;
+  margin-top: 75px;
+  position: absolute;
+  border-radius: 8px;
+  background-color: #A9382A;
+}
+.BG-PARTLIST h2{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 15px;
+  font-family: 'Poppins';
+  color: #fff;
+  
+}
+
+/*=======PREsident FRAME========*/
+.BG-Pres{
+  width: 230px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 75px;
+  position: absolute;
+  border-radius: 8px;
+  background-color: #289965;
+}
+
+
+.BG-Pres h2{
+  font-size: 14px;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 15px;
+  font-family: 'Poppins';
+  color: #fff;
+  
+}
+
 
 
 
@@ -660,6 +734,7 @@ img{
 .menu__container{
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
+  position: relative;
 }
 
 .menu__content{
