@@ -12,6 +12,14 @@ const showMenu = (toggleId, navId) =>{
     }
 }
 showMenu('nav-toggle','nav-menu')
+/*==================== POPUP MESSAGE FOR CANDIDATES ====================*/
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+    
+}
+function togglePopup2(){
+    document.getElementById("popup-2").classList.toggle("active");
+}
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')

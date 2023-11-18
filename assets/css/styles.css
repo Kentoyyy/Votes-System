@@ -533,7 +533,74 @@ img{
   font-style: bold;
 }
 
+
+/*=======POPUP NAMES OF CANDIDATES========*/
+
+.popup{
+  margin-top: 185px;
+  
+}
+
+.left-container .popup overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  width: 90vw;
+  height: 900vh;
+  background: rgb(0, 0, 0, 0,7);
+  z-index: 1;
+  display: none;
+}
+.left-container .popup .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 18px;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 500px;
+  height: 220px;
+  z-index: 2;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.content p{
+  font-size:14px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+.left-container .popup .close-btn{
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+.popup.active .overlay{
+  display: block;
+
+}
+.popup.active .content{
+  transition: all 300ms ease-in-out; 
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+
 /*=======PREsident FRAME========*/
+
+
 .BG-Pres{
   width: 230px;
   height: 50px;
@@ -598,7 +665,7 @@ img{
   width: 230px;
   height: 50px;
   margin-left: 280px;
-  margin-top: 75px;
+  margin-top: -110px;
   position: absolute;
   border-radius: 8px;
   background-color: #289965;
@@ -612,44 +679,80 @@ img{
   color: #fff;
   
 }
-.users-vcandidates i{
+.users-partylist i{
   font-size: 20px;
   position: absolute;
   margin-left: 25px;
-  margin-top: 150px;
+  margin-top: -35px;
 }
-.users-vcandidates h3{
+.users-partylist h3{
   font-size: 14px;
   position: absolute;
   margin-left: 325px;
-  margin-top: 150px;
+  margin-top: -35px;
 }
 
-.users-vcandidates1 i{
-  font-size: 20px;
-  position: absolute;
-  margin-left: 25px;
-  margin-top: 190px;
-}
-.users-vcandidates1 h3{
-  font-size: 14px;
-  position: absolute;
-  margin-left: 325px;
-  margin-top: 190px;
-}
-.users-vcandidates2 i{
+.users-partylist .popup{
+  margin-top: 185px;
 
+}
+
+.users-partylist .popup overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  width: 90vw;
+  height: 900vh;
+  background: rgb(0, 0, 0, 0,7);
+  z-index: 1;
+  display: none;
+}
+.users-partylist .popup .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 18px;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 500px;
+  height: 220px;
+  z-index: 2;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.content p{
+  font-size:14px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+.users-partylist .popup .close-btn{
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
   font-size: 20px;
-  position: absolute;
-  margin-left: 25px;
-  margin-top: 230px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
 }
-.users-vcandidates2 h3{
-  font-size: 14px;
-  position: absolute;
-  margin-left: 325px;
-  margin-top: 230px;
+.users-partylist.active .overlay{
+  display: block;
+
 }
+.popup.active .content{
+  transition: all 300ms ease-in-out; 
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
 
 /* RIGHT CONTIANER FOR PARTYLIST */
 .services__content .right-container{
