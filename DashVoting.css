@@ -62,119 +62,142 @@ header{
 
 .position-container {
     width: 220px;
-    height: 130px;
+    height: 100px;
     background: #7241D9;
     border-radius: 10px;
     position: absolute;
-    margin-left: 240px;
-    margin-top: 40px;
+    margin-left: 190px;
+    margin-top: 20px;
     display: flex;
    
 }
-.number {
-    color: #fff;
-    margin-top: -30px;
-    font-size: 40px;
+.position-container .number{
+    color: #f7f7f7;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 20px;
 
    
 }
 .position-container p{
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     position: absolute;
     font-weight: 600;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 20px;
 }
 
 .candidates-container {
     width: 220px;
-    height: 130px;
+    height: 100px;
     background: #289965;
     border-radius: 10px;
     position: absolute;
-    margin-left: 500px;
-    margin-top: 40px;
+    margin-left: 450px;
+    margin-top: 20px;
     display: flex;
    
 }
-.number {
-    color: #fff;
-    margin: 30px;
+.candidates-container .number {
+    color: #f7f7f7;
+    margin-top: 10px;
     font-size: 30px;
+    margin-left: 20px;
+
 
    
 }
 .candidates-container p{
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     position: absolute;
     font-weight: 600;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 20px;
 }
 
 .votersvoid-container {
     width: 220px;
-    height: 130px;
+    height: 100px;
     background: #DD4B39;
     border-radius: 10px;
     position: absolute;
-    margin-left: 760px;
-    margin-top: 40px;
+    margin-left: 710px;
+    margin-top: 20px;
     display: flex;
    
 }
-.number {
-    color: #fff;
-    margin: 30px;
+.votersvoid-container .number {
+    color: #f7f7f7;
+    margin-top: 10px;
     font-size: 30px;
+    margin-left: 20px;
+
 
    
 }
 .votersvoid-container p{
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     position: absolute;
     font-weight: 600;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 20px;
 }
 
 .totalvoters-container {
     width: 220px;
-    height: 130px;
+    height: 100px;
     background: #F39C12;
     border-radius: 10px;
     position: absolute;
-    margin-left: 1020px;
-    margin-top: 40px;
+    margin-left: 970px;
+    margin-top: 20px;
     display: flex;
    
 }
-.number {
-    color: #fff;
-    margin: 30px;
+.totalvoters-container .number {
+    color: #f7f7f7;
+    margin-top: 10px;
     font-size: 30px;
+    margin-left: 20px;
 
    
 }
 .totalvoters-container p{
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     position: absolute;
     font-weight: 600;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 20px;
 }
 .dashboard {
-    font-size: 60px;
+    font-size: 45px;
     color: #5555;
     font-weight: 800;
     opacity: 0.5;
     text-align: center;
     position: absolute;
-    margin-top: 180px;
+    margin-top: 130px;
+    letter-spacing: 3px;
     left: 50%;
     transform: translateX(-50%);
+}
+.left-container{
+    width: 550px;
+    height: 320px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 190px;
+    background-color: #5e5e5e55;
+    margin-left: 50px;
+}
+.left-container h2{
+    font-size: 21px;
+    color: #7e7e7e;
+    margin-left: 60px;
+    position: absolute;
+    margin-top: 15px;    
 }
