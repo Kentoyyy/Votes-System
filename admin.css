@@ -18,7 +18,7 @@ body{
     top: 0;
     left: 0;
     bottom: 0;
-    width: 240px;
+    width: 115px;
     height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
@@ -27,6 +27,10 @@ body{
     background: #289965;
      
 
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
 }
 .logo{
     height: 80px;
