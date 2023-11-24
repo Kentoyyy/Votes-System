@@ -55,9 +55,10 @@
         <i class="fa fa-user"></i>
       </div>
       <div class="input-field">
-        <input type="number" id="contact" name="contact" class="inputnumber" placeholder="Contact Number" maxlength="5" required>
+        <input type="tel" id="contact" name="contact" class="inputnumber" placeholder="Contact Number" pattern="[0-9]{11}" required>
         <i class="fa fa-user"></i>
-      </div>
+    </div>
+    
       <div class="input-field">
         <input type="text" id="address" name="address" class="inputaddress" placeholder="Address" required>
         <i class="fa fa-user"></i>
@@ -75,8 +76,9 @@
       <input type="submit" class="signupbtn" value="Sign Up">
       </div>
       <div class="input-field">
-        <input type="button" class="cancelbtn" value="Cancel">
-      </div>
+        <input type="button" class="cancelbtn" value="Cancel" onclick="redirectToLoginPage()">
+    </div>
+    
 
     </div>
     </form>
@@ -92,5 +94,11 @@
   </div>
 
 </body>
+<script>
+  function redirectToLoginPage() {
+      // Redirect to the login page
+      window.location.href = "login.html";
+  }
+</script>
 
 </html>

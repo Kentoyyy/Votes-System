@@ -1,3 +1,15 @@
+<?php
+session_start(); // Start the session at the beginning of the script
+
+// Check if the user is not logged in, redirect to the login page
+if (!isset($_SESSION["email"])) {
+    header("Location: login.html");
+    exit();
+}
+
+// Retrieve the email from the session
+$email = $_SESSION["email"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,8 +45,21 @@
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">FAQs & Help</a></li>
                     <li class="nav__item"><a href="#services" class="nav__link">Candidates</a></li>
-                    <li class="nav__item"><a href="login.html" class="nav__link">Vote</a></li>
-                    <li class="nav__item"><a href="login.html" class="nav__link">Login</a></li>
+                    <li class="nav__item"><a href="votes.php" class="nav__link">Vote</a></li>
+                    <?php
+        // Check if the user is logged in
+        if (!isset($_SESSION["email"])) {
+            // User is not logged in, show login link
+            echo '<li class="nav__item"><a href="login.html" class="nav__link">Login</a></li>';
+        } else {
+            // User is logged in, show logout button
+            echo '<li class="nav__item">
+                    <form action="logout.php" method="post">
+                        <button type="submit" class="nav__link" style="border: none; background: none; cursor: pointer;">Logout</button>
+                    </form>
+                </li>';
+        }
+        ?>
 
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                 </ul>
@@ -139,41 +164,29 @@
                         <i class="fa-solid fa-user" id="user-face" style="color: #707070;"></i>
                         <h3>ABALOS Nathaniel (AKS)</h3>
                     </div>
-                
 
-                
+
                     <div class="popup" id="popup-1">
                         <div class="overlay"></div>
                         <div class="content">
                             <div class="close-btn" onclick="togglePopup()">&times;</div>
                             <h1>Nathaniel Abalos</h1>
-                            <p>"Running for president of a school society allows me to contribute positively to the
-                                school community. I believe in fostering a more inclusive environment where every
-                                student's voice is heard and valued. Through this position,
-                                I'm passionate about representing the interests of my peers and working collaboratively
-                                to implement changes that benefit
-                                the entire student body. This opportunity also allows me to develop leadership skills,
-                                learn from diverse perspectives, 
-                                and make a meaningful impact during my time in school."
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>
+                                facilis consectetur et autem animi, in, alias possimus aliqui
                             </p>
 
                         </div>
 
                     </div>
 
-
-
-
-                    <button onclick="togglePopup()" id="btn-info"
-                        style="background: #289965; position: absolute; margin-left: -180px; height: 35px; width: 120px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More
-                        info</button>
-
+                    <button onclick="togglePopup()" id="btn-info" style="background: #289965; position: absolute; margin-left: -180px; height: 35px; width: 120px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More info</button>
+                        
                     <div class="BG-VPres">
                         <h2>For Vice President</h2>
                     </div>
                     <div class="users-partylist">
                         <i class="fa-solid fa-user" id="user-face" style="color: #707070;"></i>
-                        <h3>ALCANTARA Ken (YFP)</h3>
+                        <h3>ALCANTARA Ken (SAKSI)</h3>
 
                         <div class="popup" id="popup-2">
                             <div class="overlay"></div>
@@ -183,15 +196,14 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>
                                     facilis consectetur et autem animi, in, alias possimus aliqui
                                 </p>
-
+    
                             </div>
-
+    
                         </div>
-                        <button onclick="togglePopup2()" id="togglePopup2"
-                            style="background: #289965; position: absolute; margin-left: 80px; height: 35px; width: 120px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More
-                            info</button>
-                    </div>
+                        <button onclick="togglePopup2()" id="togglePopup2" style="background: #289965; position: absolute; margin-left: 80px; height: 35px; width: 120px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More info</button>
 
+                    </div>
+                    
 
                 </div>
 
@@ -215,16 +227,16 @@
                         <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
                     </div>
                     <div class="partylist-aksyon1">
-                        <h2>FSP</h2>
-                        <p>Fresh Start Party</p>
+                        <h2>AKS</h2>
+                        <p>Aksyon Party</p>
                     </div>
 
                     <div class="bg-user2">
                         <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
                     </div>
                     <div class="partylist-aksyon2">
-                        <h2>YFP</h2>
-                        <p>Youth for Progress</p>
+                        <h2>AKS</h2>
+                        <p>Aksyon Party</p>
                     </div>
 
 

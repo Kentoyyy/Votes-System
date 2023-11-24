@@ -568,8 +568,9 @@ img{
   box-sizing: border-box;
 }
 .content p{
-  font-size:14px;
+  font-size:10px;
   font-weight: 400;
+  text-align: justify;
   margin-left: 15px;
 }
 .left-container .popup .close-btn{
@@ -596,9 +597,11 @@ img{
   transform: translate(-50%, -50%) scale(1);
 }
 
+/*=======Banogon Info========*/
 
 
-/*=======PREsident FRAME========*/
+
+/*=======PRES FRAME========*/
 
 
 .BG-Pres{
@@ -634,31 +637,9 @@ img{
   margin-top: 150px;
 }
 
-.users-candidates1 i{
-  font-size: 20px;
-  position: absolute;
-  margin-left: -230px;
-  margin-top: 190px;
-}
-.users-candidates1 h3{
-  font-size: 14px;
-  position: absolute;
-  margin-left: 70px;
-  margin-top: 190px;
-}
-.users-candidates2 i{
 
-  font-size: 20px;
-  position: absolute;
-  margin-left: -230px;
-  margin-top: 230px;
-}
-.users-candidates2 h3{
-  font-size: 14px;
-  position: absolute;
-  margin-left: 70px;
-  margin-top: 230px;
-}
+
+
 
 /*=======VP FRAME========*/
 .BG-VPres{
@@ -865,7 +846,7 @@ img{
   font-style: bold;
   color: #707070;
   margin-top: 260px;
-  margin-left: 225px;
+  margin-left: 220px;
 }
 
 .bg-user2{
@@ -896,7 +877,7 @@ img{
   font-style: bold;
   color: #707070;
   margin-top: 260px;
-  margin-left: 400px;
+  margin-left: 385px;
 }
 
 

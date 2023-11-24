@@ -16,12 +16,8 @@ if ($conn->connect_error) {
 // Define variables to store user input
 $firstname = $lastname = $contact = $address = $email = $password = '';
 
-// Define variables to store error messages
-$firstnameErr = $lastnameErr = $contactErr = $addressErr = $emailErr = $passwordErr = '';
-
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-   
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $contact = $_POST['contact'];
@@ -34,47 +30,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($password != $password2) {
         echo "Error: Passwords do not match";
         exit();
-      }
+    }
+
+    // Hash the password for security
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Check if the email already exists in the database
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) > 0) {
-      echo "Error: Email already exists";
-      exit();
+    $sql = "SELECT * FROM users WHERE email=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "Error: Email already exists";
+        exit();
     }
 
-    // If there are no errors, insert data into the database
-    if (empty($firstnameErr) && empty($lastnameErr) && empty($contactErr) && empty($addressErr) && empty($emailErr) && empty($passwordErr) && empty($password2Err)) {
-        // Hash the password for security
+    // Insert data into the database using prepared statements
+    $sql = "INSERT INTO users (firstname, lastname, contact, address, email, password) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssss", $firstname, $lastname, $contact, $address, $email, $hashed_password);
 
-        // Prepare and execute the SQL query to insert data
-        $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, contact, address, email, password) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", $firstname, $lastname, $contact, $address, $email, $password);
+    if ($stmt->execute()) {
+        // Registration successful
+        echo '<h2>Registration Successful</h2>';
+        echo '<p>Firstname: ' . $firstname . '</p>';
+        echo '<p>Lastname: ' . $lastname . '</p>';
+        echo '<p>Contact: ' . $contact . '</p>';
+        echo '<p>Address: ' . $address . '</p>';
+        echo '<p>Email: ' . $email . '</p>';
 
-        
+        sleep(2);
 
-        if ($stmt->execute()) {
-            // Registration successful
-            echo '<h2>Registration Successful</h2>';
-            echo '<p>Firstname: ' . $firstname . '</p>';
-            echo '<p>Lastname: ' . $lastname . '</p>';
-            echo '<p>Contact: ' . $contact . '</p>';
-            echo '<p>Address: ' . $address . '</p>';
-            echo '<p>Email: ' . $email . '</p>';
-            
-            sleep(2);
-
-            header("Location: login.html");
-            exit();
-        } else {
-            // Registration failed
-            echo '<p>Error: ' . $stmt->error . '</p>';
-        }
-
-        // Close the statement
-        $stmt->close();
+        header("Location: login.html");
+        exit();
+    } else {
+        // Registration failed
+        echo '<p>Error: ' . $stmt->error . '</p>';
     }
+
+    // Close the statements
+    $stmt->close();
 }
 
 // Close the database connection

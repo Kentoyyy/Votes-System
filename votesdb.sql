@@ -27,32 +27,21 @@ SET time_zone = "+00:00";
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `userid` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `contact` int(13) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `password` varchar(24) NOT NULL,
-  `username` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`userid`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+CREATE DATABASE IF NOT EXISTS votes;
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    contact VARCHAR(20) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`userid`, `firstname`, `lastname`, `email`, `contact`, `address`, `password`, `username`) VALUES
-(1, 'ivvo', 'barroba', 'ivojoghn@gmail.com', 9113131, 'Tokyo, Japan', 'meliodas1', NULL),
-(2, 'Ivo', 'Barroba', 'ivojohnmbarroba@gmail.com', 9123, 'wuhan china', 'meliodas1', NULL),
-(3, 'Sha', 'Panes', 'shaarleenpanes@gmail.com', 9676767, 'Grove St.', 'meliodas1', NULL),
-(4, 'ja', 'bol', 'jabol@gmail.com', 91234566, 'Grove St.', '1234', NULL),
-(5, 'Ivo John', 'Barroba', 'barrobaovinhoj@gmail.com', 918613, 'Bacoor Cavite', 'youalreadyknowmyname', NULL),
-(6, 'Shaarleen', 'Panes', 'shaarleenganda@gmail.com', 912345, 'Mabolo St.', 'chiyo', NULL),
-(7, 'Ian Matthew', 'De Guzman', 'ianmatthew@gmail.com', 912432, 'Wuhan China', 'coachpenge12', NULL);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
