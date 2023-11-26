@@ -48,3 +48,16 @@ if (isset($_POST['candidate_id'])) {
 
 $conn->close();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Votes</title>
+    <link rel="stylesheet" href="DashVoting.css">
+</head>
+
+<body>
+<a href="votes.php" class="nav__link">back</a>
+</body></html>

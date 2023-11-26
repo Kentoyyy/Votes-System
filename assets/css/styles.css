@@ -516,7 +516,7 @@ img{
   font-weight: 700;
   
   position: absolute;
-  margin-left: 165px;
+  margin-left: 175px;
   margin-top: 10px;
   font-family: 'Poppins' sans-serif;
   font-style: bold;
@@ -527,7 +527,7 @@ img{
   font-weight: 400;
   border-radius: 8px;
   position: absolute;
-  margin-left: 65px;
+  margin-left: 100px;
   margin-top: 45px;
   font-family: 'Poppins' sans-serif;
   font-style: bold;
@@ -547,7 +547,7 @@ img{
   left: 0px;
   cursor: pointer;
   width: 90vw;
-  height: 900vh;
+  height: 100vh;
   background: rgb(0, 0, 0, 0,7);
   z-index: 1;
   display: none;
@@ -560,7 +560,7 @@ img{
   transform: translate(-50%, -50%) scale(0);
   background: #fff;
   width: 500px;
-  height: 220px;
+  height: 420px;
   z-index: 2;
   text-align: center;
   border-radius: 8px;
@@ -571,7 +571,9 @@ img{
   font-size:10px;
   font-weight: 400;
   text-align: justify;
-  margin-left: 15px;
+  
+  padding: 10px;
+  color: #1D2521;
 }
 .left-container .popup .close-btn{
   position: absolute;
@@ -697,7 +699,7 @@ img{
   transform: translate(-50%, -50%) scale(0);
   background: #fff;
   width: 500px;
-  height: 220px;
+  height: 420px;
   z-index: 2;
   text-align: center;
   border-radius: 8px;
@@ -846,7 +848,7 @@ img{
   font-style: bold;
   color: #707070;
   margin-top: 260px;
-  margin-left: 220px;
+  margin-left: 215px;
 }
 
 .bg-user2{

@@ -77,10 +77,8 @@ $email = $_SESSION["email"];
             <div class="home__container bd-container bd-grid">
                 <div class="home__data">
                     <h1 class="home__title">Choose<br>Candidates</h1>
-                    <h2 class="home__subtitle">Lorem ipsum dolor sit amet. Eum illum totam aut galisum
-                        perspiciatis rem incidunt recusandae et omnis libero et
-                        animi minima lel illo excepturi. Id molestias earum qui
-                        Quis doloremque nam</h2>
+                    <h2 class="home__subtitle">"Welcome! where your voice matters.
+                        Explore our diverse array of candidates committed to shaping a better future for our school."</h2>
                     <a href="#" class="button">Learn more</a>
                 </div>
 
@@ -171,8 +169,13 @@ $email = $_SESSION["email"];
                         <div class="content">
                             <div class="close-btn" onclick="togglePopup()">&times;</div>
                             <h1>Nathaniel Abalos</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>
-                                facilis consectetur et autem animi, in, alias possimus aliqui
+                            <p>Running for president of a school society allows me to contribute positively to the
+                                school community.<br><br>Enhanced Communication:
+
+                                Student Feedback Portal: Establish an online platform or app where students can submit
+                                suggestions, feedback, and ideas anonymously.<br>
+                                <br>Academic Support and Growth - Peer Tutoring Network: Establish a structured peer
+                                tutoring program where students can seek academic help from their peers.
                             </p>
 
                         </div>
@@ -186,15 +189,22 @@ $email = $_SESSION["email"];
                     </div>
                     <div class="users-partylist">
                         <i class="fa-solid fa-user" id="user-face" style="color: #707070;"></i>
-                        <h3>ALCANTARA Ken (SAKSI)</h3>
+                        <h3>ALCANTARA Ken (YFP)</h3>
 
                         <div class="popup" id="popup-2">
                             <div class="overlay"></div>
                             <div class="content">
                                 <div class="close-btn" onclick="togglePopup2()">&times;</div>
                                 <h1>Ken Alcantara</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>
-                                    facilis consectetur et autem animi, in, alias possimus aliqui
+                                <p>I am honored to stand before you today as a candidate for Vice President of our
+                                    esteemed school society. My name is [Your Name], and I am deeply committed to
+                                    serving and representing the interests of each and every one of you.
+                                    <br><br> Enhanced Communication:
+
+                                    Instance: Implementing a "Suggestion Box" accessible both physically and online,
+                                    ensuring your voices are heard and valued.
+                                    Instance: Introducing monthly forums where we gather to discuss society matters,
+                                    allowing open dialogue and transparency in decision-making.
                                 </p>
     
                             </div>
@@ -227,16 +237,16 @@ $email = $_SESSION["email"];
                         <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
                     </div>
                     <div class="partylist-aksyon1">
-                        <h2>AKS</h2>
-                        <p>Aksyon Party</p>
+                        <h2>FSP</h2>
+                        <p>Fresh Start Party</p>
                     </div>
 
                     <div class="bg-user2">
                         <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
                     </div>
                     <div class="partylist-aksyon2">
-                        <h2>AKS</h2>
-                        <p>Aksyon Party</p>
+                        <h2>YFP</h2>
+                        <p>Youth for Progress</p>
                     </div>
 
 
