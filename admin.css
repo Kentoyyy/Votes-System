@@ -137,6 +137,20 @@ body{
     transition: all 0.5s ease-out;
     background: #c7c7c758;
 }
+<<<<<<< HEAD
+=======
+.announce-wrap h2{
+    font-size: 30px;
+}
+.announce-wrap h3{
+    font-size: 15px;
+    margin-left: 40px;
+}
+.announce-wrap p{
+    font-size: 14px;
+    margin-left: 40px;
+}
+>>>>>>> e97f60e46bdcd8e31f32cb84240b48801e313af7
 
 
 
