@@ -64,29 +64,29 @@ header {
 
 
 
-.rank-info{
+.rank-info {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-.container{
+.container {
     padding: 0 20px;
     width: 530px;
-  border-radius: 10px;
-  height: 470px;
+    border-radius: 10px;
+    height: 450px;
     margin-right: 10px;
-  position: absolute;
-  background-color: rgb(240, 240, 240);
-  box-shadow: 0 2px 4px rgba(3,74,40,.15);
-    top: 250px;
-    left: 200px;
+    position: absolute;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 2px 4px rgba(3, 74, 40, .15);
+    top: 140px;
+    left: 100px;
 
 }
 
 
 
-.container h2{
+.container h2 {
     position: relative;
     background-color: #289965;
     color: #fff;
@@ -94,13 +94,17 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
     height: 40px;
-    width: 400px; /* Adjust the width to your preference */
-    margin: 0 auto; /* Center horizontally */
+    width: 400px;
+    /* Adjust the width to your preference */
+    margin: 0 auto;
+    /* Center horizontally */
     font-size: 20px;
-    
+
 }
 
 
@@ -111,7 +115,7 @@ header {
     justify-content: space-between;
 }
 
-.rank-box{
+.rank-box {
     margin: 15px 0;
     display: flex;
     justify-content: space-between;
@@ -120,7 +124,7 @@ header {
 }
 
 
-.number{
+.number {
     margin-right: 10px;
     min-width: 20px;
 }
@@ -128,75 +132,77 @@ header {
 
 
 
-.rank-box .skill-bar{
+.rank-box .skill-bar {
     height: 8px;
     width: 100%;
     border-radius: 6px;
     margin-top: 6px;
     background: rgba(0, 0, 0, 0.1);
     margin-left: 8px;
-}   
+}
 
-.skill-bar .skill-per{
+.skill-bar .skill-per {
     position: relative;
     display: block;
     height: 100%;
     width: 61.98%;
     border-radius: 6px;
-    background:  #048654;
+    background: #048654;
     animation: progress 0.4s ease-in-out forwards;
     opacity: 0;
-    
+
 }
 
-.skill-per.rank2{
+.skill-per.rank2 {
     width: 97.79%;
 }
 
-.skill-per.rank3{
+.skill-per.rank3 {
     width: 98.74%;
 }
 
-.skill-per.rank4{
+.skill-per.rank4 {
     width: 49.84%;
 }
 
-.skill-per.rank5{
+.skill-per.rank5 {
     width: 61.98%;
-}   
+}
 
-.skill-per.rank6{
+.skill-per.rank6 {
     width: 96.70%;
 }
 
-.skill-per.rank7{
+.skill-per.rank7 {
     width: 98.74%;
 }
 
-.skill-per.rank8{
+.skill-per.rank8 {
     width: 49.84%;
 }
 
-.skill-per.rank9{
+.skill-per.rank9 {
     width: 49.84%;
 }
 
 
 
 @keyframes progress {
-    0%{
+    0% {
         width: 0;
         opacity: 0;
-       
+
     }
-    100%{
-        
+
+    100% {
+
         opacity: 1;
-       
+
     }
 
 }
-.skill-per .tooltip{
+
+.skill-per .tooltip {
     position: absolute;
     right: -14px;
     top: -28px;
@@ -223,32 +229,32 @@ header {
 
 /* RIGHT CONTIANER FOR Election Results */
 
-.rank-info{
+.rank-info {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.rank-info p{
+.rank-info p {
     margin: 0;
 }
 
-.container2{
+.container2 {
     padding: 0 20px;
     width: 530px;
-  border-radius: 10px;
-  height: 470px;
-  margin-left: 490px;
-  position: absolute;
-  background-color: rgb(240, 240, 240);
-  box-shadow: 0 2px 4px rgba(3,74,40,.15);
-    top: 250px;
-    left: 250px;
+    border-radius: 10px;
+    height: 450px;
+    margin-left: 490px;
+    position: absolute;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 2px 4px rgba(3, 74, 40, .15);
+    top: 140px;
+    left: 230px;
 }
 
 
 
-.container2 h2{
+.container2 h2 {
     position: relative;
     background-color: #A9382A;
     color: #fff;
@@ -256,20 +262,24 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
     height: 40px;
-    width: 400px; /* Adjust the width to your preference */
-    margin: 0 auto; /* Center horizontally */
+    width: 400px;
+    /* Adjust the width to your preference */
+    margin: 0 auto;
+    /* Center horizontally */
     font-size: 20px;
 
-    
+
 }
 
 
 
 
-.rank-box{
+.rank-box {
     margin: 11px 0;
     display: flex;
     justify-content: space-between;
@@ -277,12 +287,12 @@ header {
     width: 100%;
 }
 
-.number{
+.number {
     margin-right: 10px;
     min-width: 20px;
 }
 
-.rank-box .name{
+.rank-box .name {
     margin-right: 70px;
     min-width: 40px;
     display: flex;
@@ -291,66 +301,66 @@ header {
 
 }
 
-.rank-box .name{
+.rank-box .name {
     display: block;
     font-size: 14px;
     font-weight: 600;
     color: #333;
 }
 
-.rank-box .skill-bar2{
+.rank-box .skill-bar2 {
     height: 8px;
     width: 100%;
     border-radius: 6px;
     margin-top: 6px;
     background: rgba(0, 0, 0, 0.1);
-}   
+}
 
-.skill-bar2 .skill-per{
+.skill-bar2 .skill-per {
     position: relative;
     display: block;
     height: 100%;
     width: 61.98%;
     border-radius: 6px;
-    background:  #A9382A;
+    background: #A9382A;
     animation: progress 0.4s ease-in-out forwards;
     opacity: 0;
 }
 
-.skill-per.rank2{
+.skill-per.rank2 {
     width: 97.79%;
 }
 
-.skill-per.rank3{
+.skill-per.rank3 {
     width: 98.74%;
 }
 
-.skill-per.rank4{
+.skill-per.rank4 {
     width: 49.84%;
 }
 
-.skill-per.rank5{
+.skill-per.rank5 {
     width: 61.98%;
-}   
+}
 
-.skill-per.rank6{
+.skill-per.rank6 {
     width: 96.70%;
 }
 
-.skill-per.rank7{
+.skill-per.rank7 {
     width: 98.74%;
 }
 
-.skill-per.rank8{
+.skill-per.rank8 {
     width: 49.84%;
 }
 
-.skill-per.rank9{
+.skill-per.rank9 {
     width: 49.84%;
 }
 
 
-.skill-per .tooltip2{
+.skill-per .tooltip2 {
     position: absolute;
     right: -14px;
     top: -28px;
@@ -377,15 +387,19 @@ header {
 
 .text-container {
     position: absolute;
-    top: 250px; /* Adjust the top position as needed */
-    left: 0px; /* Adjust the left position as needed */
-    width: 300px; /* Adjust the width as needed */
+    top: 250px;
+    /* Adjust the top position as needed */
+    left: 0px;
+    /* Adjust the left position as needed */
+    width: 300px;
+    /* Adjust the width as needed */
     margin-left: 10px;
 }
 
 .text-container p {
     font-size: 45px;
-    color: grey; /* Adjust the color as needed */
+    color: grey;
+    /* Adjust the color as needed */
     /* Add any other styling you want for the text */
     writing-mode: vertical-lr;
     text-orientation: sideways;
@@ -395,18 +409,22 @@ header {
 
 .text-container2 {
     position: absolute;
-    top: 250px; /* Adjust the top position as needed */
-    right: 0px; /* Adjust the left position as needed */
-    width: 300px; /* Adjust the width as needed */
+    top: 250px;
+    /* Adjust the top position as needed */
+    right: 0px;
+    /* Adjust the left position as needed */
+    width: 300px;
+    /* Adjust the width as needed */
     margin-left: 10px;
 }
 
 .text-container2 p {
     font-size: 45px;
-    color: grey; /* Adjust the color as needed */
+    color: grey;
+    /* Adjust the color as needed */
     /* Add any other styling you want for the text */
     writing-mode: vertical-lr;
     text-orientation: sideways;
-    
+
     opacity: 0.3;
 }
