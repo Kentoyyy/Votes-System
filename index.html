@@ -36,7 +36,7 @@
                     <li class="nav__item"><a href="#services" class="nav__link">Candidates</a></li>
                     <li class="nav__item"><a href="Dashboard_Voting.html" class="nav__link">Vote</a></li>
                     <li class="nav__item"><a href="VOTING.html" class="nav__link">Election Result</a></li>
-                    
+
                     <li class="nav__item"><a href="login.html" class="nav__link">Login</a></li>
 
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
@@ -213,15 +213,39 @@
                         <h2>PARTYLIST GROUP</h2>
                     </div>
 
-                    <div class="party-button" onclick="handleClick('AKS')">
-                        <div class="bg-user">
-                            <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
-                        </div>
-                        <div class="partylist-aksyon">
-                            <h2>AKS</h2>
-                            <p>Aksyon Party</p>
-                        </div>
+
+                    <div class="bg-user">
+                        <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
                     </div>
+                    <div class="partylist-aksyon">
+                        <h2>AKS</h2>
+                        <p>Aksyon Party</p>
+                        <div class="popup" id="popup-aksyon">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopupaksyon()">&times;</div>
+                                <h1>Aksyon Partylist</h1>
+                                <p>I am honored to stand before you today as a candidate for Vice President of our
+                                    esteemed school society. My name is [Your Name], and I am deeply committed to
+                                    serving and representing the interests of each and every one of you.
+                                    <br><br> Enhanced Communication:
+
+                                    Instance: Implementing a "Suggestion Box" accessible both physically and online,
+                                    ensuring your voices are heard and valued.
+                                    Instance: Introducing monthly forums where we gather to discuss society matters,
+                                    allowing open dialogue and transparency in decision-making.
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <button onclick="togglePopupaksyon()" id="togglePopupaksyon"
+                            style="background: #289965; position: absolute; margin-left: 80px; height: 35px; width: 120px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More
+                            info</button>
+
+
+                    </div>
+
 
                     <div class="bg-user1">
                         <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>

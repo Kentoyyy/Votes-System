@@ -20,6 +20,9 @@ function togglePopup(){
 function togglePopup2(){
     document.getElementById("popup-2").classList.toggle("active");
 }
+function togglePopupaksyon(){
+    document.getElementById("popup-aksyon").classList.toggle("active");
+}
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
