@@ -606,6 +606,13 @@ img{
 /*=======PRES FRAME========*/
 
 
+/*=======PARTYLIST POPUP MESSAGE========*/
+togglePopupaksyon{
+  position: absolute;
+  margin-left: 90px;
+  margin-top: 50px;
+  background-color: #048654;
+}
 .partylist-aksyon .popup overlay{
   position: fixed;
   top: 0px;
