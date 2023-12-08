@@ -23,6 +23,13 @@ function togglePopup2(){
 function togglePopupaksyon(){
     document.getElementById("popup-aksyon").classList.toggle("active");
 }
+function togglePopupFSP(){
+    document.getElementById("popup-FSP").classList.toggle("active");
+}
+function togglePopupYFP(){
+    document.getElementById("popup-FYP").classList.toggle("active");
+}
+
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
