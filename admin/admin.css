@@ -256,6 +256,9 @@ body{
     margin: 20px;
 
 }
+.announce-wrap .h3{
+    font-size: 15px;
+}
 .announce-wrap i{
  font-size: 1.7rem;
  margin-left: 730px;
