@@ -413,6 +413,84 @@ progress {
     background-color: #DD4B39;
   }
 
+  
+  .VPprogress-container {
+    width: 550px;
+    height: 320px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 550px;
+    background-color: #dadada55;
+    margin-left: 700px;
+}
+
+.VPprogress-container h2 {
+    font-size: 19px;
+    color: #181818;
+    margin-left: 30px;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.line {
+    width: 90%;
+    height: 1px;
+    margin-left: 30px;
+    background-color: black;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.VPprogress-container p {
+    font-size: 13px;
+    color: #000;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 30px;
+}
+
+.progress-candidates {
+    margin-top: 500px;
+    position: absolute; /* Adjust the value as needed */
+  }
+  
+  table {
+    width: 95%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 6px 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+progress {
+    width: 200px;
+    height: 15px;
+
+    border: none;
+    appearance: none; 
+  }
+  
+ 
+  progress::-webkit-progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+
+  progress::-webkit-progress-value {
+    background-color: #007bff;
+    border-radius: 4px;
+  }
+
+
+
+
+
+
   .Participation-container {
     width: 550px;
     height: 320px;
