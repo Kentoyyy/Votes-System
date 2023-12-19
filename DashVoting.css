@@ -328,18 +328,158 @@ progress {
     height: 15px;
 
     border: none;
-    appearance: none; /* Remove the default styling */
+    appearance: none; 
   }
   
-  /* Customize the progress bar track and color */
+ 
   progress::-webkit-progress-bar {
     background-color: #f0f0f0;
     border-radius: 4px;
   }
   
-  /* Customize the progress bar fill color */
+
   progress::-webkit-progress-value {
     background-color: #007bff;
     border-radius: 4px;
   }
+
+
+  .VP-container {
+    width: 550px;
+    height: 320px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 550px;
+    background-color: #dadada55;
+    margin-left: 90px;
+}
+
+.VP-container h2 {
+    font-size: 19px;
+    color: #181818;
+    margin-left: 30px;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.line {
+    width: 90%;
+    height: 1px;
+    margin-left: 30px;
+    background-color: black;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.VP-container p {
+    font-size: 13px;
+    color: #000;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 30px;
+}
+
+.candidates1 {
+    margin-top: 500px;
+    
+    position: absolute; 
+  }
+  
+  table {
+    width: 95%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 10px 35px ;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .vote-button {
+    background-color: #289965;
+    color: #fff;
+    font-size: 15px;
+    width: 70px;
+    border: none;
+    padding: 7px 19px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .vote-button:hover {
+    background-color: #DD4B39;
+  }
+
+  .Participation-container {
+    width: 550px;
+    height: 320px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 910px;
+    background-color: #dadada55;
+    margin-left: 90px;
+}
+
+.Participation-container h2 {
+    font-size: 19px;
+    color: #181818;
+    margin-left: 30px;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.line {
+    width: 90%;
+    height: 1px;
+    margin-left: 30px;
+    background-color: black;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.Participation-container p {
+    font-size: 13px;
+    color: #000;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 30px;
+}
+
+.candidates1 {
+    margin-top: 500px;
+    
+    position: absolute; 
+  }
+  
+  table {
+    width: 95%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 10px 35px ;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .vote-button {
+    background-color: #289965;
+    color: #fff;
+    font-size: 15px;
+    width: 70px;
+    border: none;
+    padding: 7px 19px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .vote-button:hover {
+    background-color: #DD4B39;
+  }
+
 
