@@ -190,14 +190,15 @@ header {
 }
 
 .dashboard {
-    font-size: 45px;
+    font-size: 70px;
     color: #5555;
     font-weight: 800;
     opacity: 0.5;
     text-align: center;
     position: absolute;
-    margin-top: 130px;
+    margin-top: 150px;
     letter-spacing: 3px;
+
     left: 50%;
     transform: translateX(-50%);
 }
@@ -207,7 +208,7 @@ header {
     height: 320px;
     border-radius: 10px;
     position: absolute;
-    margin-top: 190px;
+    margin-top: 300px;
     background-color: #dadada55;
     margin-left: 90px;
 }
@@ -276,7 +277,7 @@ header {
     height: 320px;
     border-radius: 10px;
     position: absolute;
-    margin-top: 190px;
+    margin-top: 300px;
     background-color: #dadada55;
     margin-left: 700px;
 }
@@ -349,7 +350,7 @@ progress {
     height: 320px;
     border-radius: 10px;
     position: absolute;
-    margin-top: 550px;
+    margin-top: 650px;
     background-color: #dadada55;
     margin-left: 90px;
 }
@@ -419,7 +420,7 @@ progress {
     height: 320px;
     border-radius: 10px;
     position: absolute;
-    margin-top: 550px;
+    margin-top: 650px;
     background-color: #dadada55;
     margin-left: 700px;
 }
@@ -496,7 +497,7 @@ progress {
     height: 320px;
     border-radius: 10px;
     position: absolute;
-    margin-top: 910px;
+    margin-top: 1000px;
     background-color: #dadada55;
     margin-left: 90px;
 }
