@@ -156,7 +156,7 @@ body {
 
 .announcements-container {
     width: 900px;
-    height: 350px;
+    height: 500px;
 
     position: absolute;
     border-radius: 5px;
@@ -183,11 +183,30 @@ body {
     margin-top: -50px;
 }
 
-#list{
-    font-size: 15px;
-    font-weight: 500;
+#list {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 25px; /* Adds some left padding */
+    font-family: Arial, sans-serif; /* Sets the font family */
 }
 
+#list li {
+    margin-bottom: 15px; /* Adds space between list items */
+    line-height: 1.5; /* Adjusts line height for readability */
+    color: #333;
+    list-style-image: url('https://via.placeholder.com/10');
+    font-size: 13px;
+    font-weight: 500; /* Sets text color */
+}
+
+/* Specific style for the second <li> item */
+#list li:nth-child(2) {
+    font-size: 13px;
+    font-weight: 500; /* Makes the second item bold */
+}
+#list li:nth-child(3) {
+    font-size: 13px;
+    font-weight: 500; /* Makes the second item bold */
+}
 
 
 .card-participation {
