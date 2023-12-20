@@ -177,10 +177,15 @@ body {
 }
 
 .announcements-wrap i {
-    font-size: 1.7rem;
-    margin-left: 730px;
+    font-size: 1.9rem;
+    margin-left: 830px;
     position: absolute;
     margin-top: -50px;
+}
+
+#list{
+    font-size: 15px;
+    font-weight: 500;
 }
 
 
