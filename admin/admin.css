@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: none;
@@ -9,11 +9,11 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     display: flex;
 }
 
-.sidebar{
+.sidebar {
     position: sticky;
     top: 0;
     left: 0;
@@ -25,37 +25,44 @@ body{
     overflow: hidden;
     transition: all 0.5s linear;
     background: #289965;
-     
+
 
 }
-.sidebar:hover{
+
+.sidebar:hover {
     width: 280px;
     transition: 0.5s;
 }
-.logo{
+
+.logo {
     height: 120px;
     padding: 16px;
 }
-.menu{
+
+.menu {
     height: 88%;
     position: relative;
     list-style: none;
     padding: 0;
 }
-.menu li{
-    padding:  1rem;
+
+.menu li {
+    padding: 1rem;
     margin: 8px 0;
     border-radius: 8px;
-    transition:  all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
-.menu li:hover{
-    background: #e0e0e058;
-}
-.menu li:hover, .active{
+
+.menu li:hover {
     background: #e0e0e058;
 }
 
-.menu a{
+.menu li:hover,
+.active {
+    background: #e0e0e058;
+}
+
+.menu a {
     color: #fff;
     font-size: 14px;
     text-decoration: none;
@@ -63,31 +70,34 @@ body{
     align-items: center;
     gap: 1.5rem;
 }
-.menu a span{
+
+.menu a span {
     overflow: hidden;
 }
-.menu a i{
+
+.menu a i {
     font-size: 1.2rem;
 }
-.logout{
+
+.logout {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    margin-top: 100px;
 }
 
-.main-content{
+.main-content {
     position: relative;
     background: #ebe9e9;
     width: 100%;
     padding: 1rem;
 }
-.header-wrapper img{
+
+.header-wrapper img {
     width: 50px;
     height: 50px;
     cursor: pointer;
     border-radius: 50%;
 }
+
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -98,15 +108,18 @@ body{
     padding: 10px 2rem;
     margin-bottom: 1rem;
 }
-.header-title{
+
+.header-title {
     color: #289965;
 }
-.user-info{
+
+.user-info {
     display: flex;
     align-items: center;
     gap: 1;
 }
-.search-box{
+
+.search-box {
     background: rgb(237, 237, 237);
     border-radius: 15px;
     color: #289965;
@@ -115,21 +128,24 @@ body{
     gap: 5px;
     padding: 4px 12px;
 }
-.search-box input{
+
+.search-box input {
     background: transparent;
     padding: 10px;
 }
+
 .search-box i {
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.5s ease-out;
 }
-.search-box i:hover{
+
+.search-box i:hover {
     transform: scale(1.2);
 
 }
 
-.announce-container{
+.announce-container {
     width: 800px;
     height: 270px;
     position: absolute;
@@ -138,9 +154,38 @@ body{
     background: #c7c7c758;
 }
 
+.announcements-container {
+    width: 900px;
+    height: 350px;
+
+    position: absolute;
+    border-radius: 5px;
+    transition: all 0.5s ease-out;
+    background: #c7c7c758;
+}
+
+.announcements-wrap h2 {
+    font-size: 20px;
+    color: #289965;
+    font-weight: 700;
+    margin: 20px;
+
+}
+
+.announcements-wrap .h3 {
+    font-size: 13px;
+}
+
+.announcements-wrap i {
+    font-size: 1.7rem;
+    margin-left: 730px;
+    position: absolute;
+    margin-top: -50px;
+}
 
 
-.card-participation{
+
+.card-participation {
     width: 200px;
     border-radius: 10px;
     transition: all 0.5s ease-out;
@@ -150,14 +195,16 @@ body{
     color: #fff;
     margin-left: 900px;
     margin-top: 30px;
-    
+
 }
+
 .card-participation i {
     font-size: 2.5rem;
     transition: all 0.5s ease-in-out;
     margin: 20px;
 }
-.card-participation h2{
+
+.card-participation h2 {
     font-size: 13px;
     color: #fff;
     font-weight: 500;
@@ -166,7 +213,8 @@ body{
     margin-top: 15px;
 
 }
-.card-participation h3{
+
+.card-participation h3 {
     font-size: 25px;
     color: #fff;
     font-weight: 500;
@@ -177,7 +225,7 @@ body{
 }
 
 
-.card-accounts{
+.card-accounts {
     width: 200px;
     border-radius: 10px;
     height: 120px;
@@ -187,14 +235,16 @@ body{
     color: #fff;
     margin-left: 900px;
     margin-top: 160px;
-    
+
 }
+
 .card-accounts i {
     font-size: 2.5rem;
     transition: all 0.5s ease-in-out;
     margin: 20px;
 }
-.card-accounts h2{
+
+.card-accounts h2 {
     font-size: 13px;
     color: #fff;
     font-weight: 500;
@@ -203,7 +253,8 @@ body{
     margin-top: 15px;
 
 }
-.card-accounts h3{
+
+.card-accounts h3 {
     font-size: 25px;
     color: #fff;
     font-weight: 500;
@@ -214,7 +265,7 @@ body{
 }
 
 
-.card-votes{
+.card-votes {
     width: 200px;
     border-radius: 10px;
     height: 120px;
@@ -224,14 +275,16 @@ body{
     color: #fff;
     margin-left: 900px;
     margin-top: 290px;
-    
+
 }
+
 .card-votes i {
     font-size: 2.5rem;
     transition: all 0.5s ease-in-out;
     margin: 20px;
 }
-.card-votes h2{
+
+.card-votes h2 {
     font-size: 13px;
     color: #fff;
     font-weight: 500;
@@ -240,7 +293,8 @@ body{
     margin-top: 15px;
 
 }
-.card-votes h3{
+
+.card-votes h3 {
     font-size: 25px;
     color: #fff;
     font-weight: 500;
@@ -249,24 +303,27 @@ body{
     position: absolute;
 
 }
-.announce-wrap h2{
+
+.announce-wrap h2 {
     font-size: 17px;
     color: #289965;
     font-weight: 700;
     margin: 20px;
 
 }
-.announce-wrap .h3{
+
+.announce-wrap .h3 {
     font-size: 15px;
 }
-.announce-wrap i{
- font-size: 1.7rem;
- margin-left: 730px;
- position: absolute;
- margin-top: -50px;
+
+.announce-wrap i {
+    font-size: 1.7rem;
+    margin-left: 730px;
+    position: absolute;
+    margin-top: -50px;
 }
 
-.active-now{
+.active-now {
     background-color: #289965;
     border-radius: 180px;
     width: 20px;
@@ -275,12 +332,13 @@ body{
     margin-left: 20px;
     margin-top: 40px;
 }
-.container-accounts h3{
- color: #888888;
- font-size: 14px;
- margin-left: 50px;
- position: absolute;
- margin-top: -20px;
+
+.container-accounts h3 {
+    color: #888888;
+    font-size: 14px;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: -20px;
 
 }
 
@@ -288,29 +346,30 @@ body{
     text-align: center;
     font-size: 1em;
     margin-bottom: 20px;
-  }
-  
-  table {
+}
+
+table {
     border-collapse: collapse;
     width: 100%;
     font-size: 14px;
-  }
-  
-  th, td {
+}
+
+th,
+td {
     padding: 10px;
     border: 1px solid #ddd;
-    
-  }
-  
-  th {
+
+}
+
+th {
     background-color: #eee;
-  }
-  
-  a {
+}
+
+a {
     color: #007bff;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
+}
