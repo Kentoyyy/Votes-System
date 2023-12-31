@@ -151,7 +151,8 @@ body {
     position: absolute;
     border-radius: 5px;
     transition: all 0.5s ease-out;
-    background: #c7c7c758;
+    background: #f7f7f7;
+    box-shadow: 0px 0px 2px #686868;
 }
 
 .announcements-container {
@@ -161,7 +162,8 @@ body {
     position: absolute;
     border-radius: 5px;
     transition: all 0.5s ease-out;
-    background: #c7c7c758;
+    background: #f7f7f7;
+    box-shadow: 0px 0px 2px #686868;
 }
 
 .announcements-wrap h2 {
@@ -184,28 +186,37 @@ body {
 }
 
 #list {
-    list-style-type: none; /* Removes default bullets */
-    padding-left: 25px; /* Adds some left padding */
-    font-family: Arial, sans-serif; /* Sets the font family */
+    list-style-type: none;
+    /* Removes default bullets */
+    padding-left: 25px;
+    /* Adds some left padding */
+    font-family: Arial, sans-serif;
+    /* Sets the font family */
 }
 
 #list li {
-    margin-bottom: 15px; /* Adds space between list items */
-    line-height: 1.5; /* Adjusts line height for readability */
+    margin-bottom: 15px;
+    /* Adds space between list items */
+    line-height: 1.5;
+    /* Adjusts line height for readability */
     color: #333;
     list-style-image: url('https://via.placeholder.com/10');
     font-size: 13px;
-    font-weight: 500; /* Sets text color */
+    font-weight: 500;
+    /* Sets text color */
 }
 
 /* Specific style for the second <li> item */
 #list li:nth-child(2) {
     font-size: 13px;
-    font-weight: 500; /* Makes the second item bold */
+    font-weight: 500;
+    /* Makes the second item bold */
 }
+
 #list li:nth-child(3) {
     font-size: 13px;
-    font-weight: 500; /* Makes the second item bold */
+    font-weight: 500;
+    /* Makes the second item bold */
 }
 
 
@@ -396,4 +407,13 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.settings-container {
+    background: #f7f7f7;
+    margin-left: 20px;
+    width: 800px;
+    height: 490px;
+    box-shadow: 0px 0px 2px #686868;
+    border-radius: 8px;
 }
