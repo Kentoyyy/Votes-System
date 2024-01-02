@@ -22,6 +22,7 @@ body {
     height: 100vh;
     padding: 0 1.7rem;
     color: #fff;
+    text-decoration: none;
     overflow: hidden;
     transition: all 0.5s linear;
     background: #289965;
@@ -68,7 +69,7 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.9rem;
 }
 
 .menu a span {
@@ -81,7 +82,9 @@ body {
 
 .logout {
     position: absolute;
-    margin-top: 100px;
+    margin-bottom: 50px;
+    left: 0;
+    width: 100%;
 }
 
 .main-content {
@@ -413,7 +416,7 @@ a:hover {
     background: #f7f7f7;
     margin-left: 20px;
     width: 800px;
-    height: 490px;
+    height: 470px;
     box-shadow: 0px 0px 2px #686868;
     border-radius: 8px;
 }
