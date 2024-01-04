@@ -438,3 +438,49 @@ a:hover {
     box-shadow: 0px 0px 2px #686868;
     border-radius: 8px;
 }
+.settings-container h2{
+    font-size: 18px;
+    color: #686868;
+    margin-left: 30px;
+    margin-top: 100px;
+    position: absolute;
+
+}
+.settings-container h1{
+    font-size: 21px;
+    color: #289965;
+    margin-left: 30px;
+    margin-top: 30px;
+    position: absolute;
+
+}
+.settings-container p{
+    font-size: 12px;
+    color: #686868;
+    margin-left: 30px;
+    margin-top: 130px;
+    position: absolute;
+
+}
+.settings-container .reset-btn{
+    background-color: #289965;
+    border-radius: 7px;
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 140px;
+}
+.reset-btn h2{
+    font-size: 14px;
+    color: #fff;
+    margin-top: 8px;
+    font-weight: 500;
+    position: absolute;
+    cursor: pointer;
+}
+.h2 .documentations{
+    font-size: 17px;
+    position: absolute;
+    margin-top: 300px;
+}
