@@ -132,9 +132,10 @@ body {
     margin-right: 70px;
 }
 .push-btn h2{
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     margin-top: 8px;
+    font-weight: 500;
     display: flex;
   justify-content: center;
   align-items: center;
@@ -479,8 +480,59 @@ a:hover {
     position: absolute;
     cursor: pointer;
 }
-.h2 .documentations{
-    font-size: 17px;
+
+.setting-container{
+    background: #f7f7f7;
+    margin-left: 830px;
+   margin-top: -470px;
+
+    width: 290px;
+    height: 470px;
+    box-shadow: 0px 0px 2px #686868;
+    border-radius: 8px;
+
+}
+.View-web h2{
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 30px;
+    color: #289965;
     position: absolute;
-    margin-top: 300px;
+}
+.View-web p{
+    font-size: 12px;
+    color: #686868;
+    margin-left: 20px;
+    margin-top: 60px;
+    position: absolute;
+}
+
+.View-code h2{
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 140px;
+    color: #289965;
+    position: absolute;
+}
+.View-code p{
+    font-size: 12px;
+    color: #686868;
+    margin-left: 20px;
+    margin-top: 170px;
+    position: absolute;
+}
+
+.Admin-Panel h2{
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 250px;
+    color: #289965;
+    position: absolute;
+}
+.Admin-Panel p{
+    font-size: 12px;
+    color: #686868;
+    margin-left: 20px;
+    margin-top: 280px;
+    position: absolute;
 }
