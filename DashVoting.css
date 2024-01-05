@@ -98,7 +98,7 @@ header {
 }
 
 .candidates-container {
-    width: 220px;
+    width: 250px;
     height: 100px;
     background: #289965;
     border-radius: 10px;
@@ -273,12 +273,13 @@ header {
 
 
   .right-container {
-    width: 550px;
+    width: 600px;
     height: 320px;
     border-radius: 10px;
     position: absolute;
     margin-top: 300px;
-    background-color: #dadada55;
+    background: #f7f7f7;
+    box-shadow: 0px 0px 2px #686868;
     margin-left: 700px;
 }
 
