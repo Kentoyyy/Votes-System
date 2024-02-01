@@ -27,8 +27,8 @@ header {
 
 .logo {
     cursor: pointer;
-    width: 140px;
-    height: 130px;
+    width: 150px;
+    height: 90px;
     margin-left: -30px;
 
 }
@@ -62,8 +62,33 @@ header {
     color: #fff;
 }
 
+.view-button{
+  margin-bottom: 50px; /* Add margin between buttons */
+  background-color: #289965; /* Green */
+  border: none;
+  margin-top: 240px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+ 
+  font-size: 15px;
+  margin-left: 200px;
+  
+  height: 45px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+
+
+.position-container .view-button{
+  position: absolute;
+  margin-left: 100px;
+}
 .container-positions {
-    margin-left: 500px;
+    margin-left: 300px;
     position: absolute;
 }
 
@@ -73,7 +98,7 @@ header {
     background: #7241D9;
     border-radius: 10px;
     position: absolute;
-    margin-left: 190px;
+    margin-left: -60px;
     margin-top: 20px;
     display: flex;
 
@@ -83,7 +108,7 @@ header {
     color: #f7f7f7;
     margin-top: 10px;
     font-size: 30px;
-    margin-left: 20px;
+    margin-left:10px;
 
 
 }
@@ -98,12 +123,12 @@ header {
 }
 
 .candidates-container {
-    width: 250px;
+    width: 220px;
     height: 100px;
     background: #289965;
     border-radius: 10px;
     position: absolute;
-    margin-left: 450px;
+    margin-left: 170px;
     margin-top: 20px;
     display: flex;
 
@@ -134,7 +159,7 @@ header {
     background: #DD4B39;
     border-radius: 10px;
     position: absolute;
-    margin-left: 710px;
+    margin-left: 400px;
     margin-top: 20px;
     display: flex;
 
@@ -165,7 +190,7 @@ header {
     background: #F39C12;
     border-radius: 10px;
     position: absolute;
-    margin-left: 970px;
+    margin-left: 630px;
     margin-top: 20px;
     display: flex;
 

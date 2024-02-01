@@ -109,6 +109,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Votes</title>
     <link rel="stylesheet" href="DashVoting.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"> 
 </head>
 
 <body>
@@ -134,6 +135,8 @@ $conn->close();
         ?>
 
     </div>
+
+    <div class="button-container">
         <!-- Your position-container, candidates-container, votersvoid-container, totalvoters-container, and dashboard elements go here -->
 
         <h2 class="dashboard">DASHBOARD</h2>
@@ -221,11 +224,23 @@ $conn->close();
                     </table>
                 </div>
             </table>
+        <button class="view-button" onclick="window.location.href='vice_presidency.php'">View Vice Presidency</button>
+        <button class="view-button" onclick="window.location.href='secretary.php'">View Secretary</button>
+        <button class="view-button" onclick="window.location.href='treasurer.php'">View treasurer</button>
         </div>
+
+        
+
+       
+
+
+     
+
+        
     </div>
-    <button class="view-button" onclick="window.location.href='vice_presidency.php'">View Vice Presidency</button>
-    <button class="view-button" onclick="window.location.href='secretary.php'">View Secretary</button>
-    <button class="view-button" onclick="window.location.href='treasurer.php'">View treasurer</button>
+
+   
+   
 </body>
 
 </html>

@@ -221,7 +221,7 @@ $conn->close();
             </div>
         </div>
     </div>
-
+                        
     <button class="view-button" onclick="window.location.href='vice_presidency.php'">View Vice Presidency</button>
     <button class="view-button" onclick="window.location.href='secretary.php'">View Secretary</button>
     <button class="view-button" onclick="window.location.href='votes.php'">View Presidency</button>

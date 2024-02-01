@@ -1,4 +1,4 @@
-<?php
+ <?php
 session_start(); // Start the session at the beginning of the script
 
 // Check if the user is not logged in, redirect to the login page
@@ -24,6 +24,7 @@ $email = $_SESSION["email"];
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <title>Votes</title>
 </head>
@@ -79,7 +80,7 @@ $email = $_SESSION["email"];
                     <h1 class="home__title">Choose<br>Candidates</h1>
                     <h2 class="home__subtitle">"Welcome! where your voice matters.
                         Explore our diverse array of candidates committed to shaping a better future for our school."</h2>
-                    <a href="#" class="button">Learn more</a>
+                    <a href="#about" class="button">Learn more</a>
                 </div>
 
                 <img src="assets/img/homepic.png" alt="" class="home__img">
@@ -225,13 +226,36 @@ $email = $_SESSION["email"];
                         <h2>PARTYLIST GROUP</h2>
                     </div>
 
+
                     <div class="bg-user">
                         <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
                     </div>
                     <div class="partylist-aksyon">
                         <h2>AKS</h2>
                         <p>Aksyon Party</p>
+                        <div class="popup" id="popup-aksyon" >
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopupaksyon()">&times;</div>
+                                <h1>Aksyon Partylist</h1>
+                                <p>Names: Alcantara <br> Banogon <br> Barroba
+
+                                    Instance: Implementing a "Suggestion Box" accessible both physically and online,
+                                    ensuring your voices are heard and valued.
+                                    Instance: Introducing monthly forums where we gather to discuss society matters,
+                                    allowing open dialogue and transparency in decision-making.
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <button onclick="togglePopupaksyon()" id="togglePopupaksyon"
+                            style="background: #A9382A; position: absolute; margin-left: -220px; height: 35px; width: 100px; margin-top: 300px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More
+                            info</button>
+
+
                     </div>
+
 
                     <div class="bg-user1">
                         <i class="fa-solid fa-user" id="user-face" style="color: #cecece;"></i>
@@ -239,6 +263,25 @@ $email = $_SESSION["email"];
                     <div class="partylist-aksyon1">
                         <h2>FSP</h2>
                         <p>Fresh Start Party</p>
+                        <div class="popup" id="popup-FSP" >
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopupFSP()">&times;</div>
+                                <h1>Fresh Start Partylist</h1>
+                                <p>Names: Alcantara <br> Banogon <br> Barroba
+
+                                    Instance: Implementing a "Suggestion Box" accessible both physically and online,
+                                    ensuring your voices are heard and valued.
+                                    Instance: Introducing monthly forums where we gather to discuss society matters,
+                                    allowing open dialogue and transparency in decision-making.
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <button onclick="togglePopupFSP()" id="togglePopupaksyon"
+                            style="background: #A9382A; position: absolute; margin-left: -40px; height: 35px; width: 100px; margin-top: 300px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More
+                            info</button>
                     </div>
 
                     <div class="bg-user2">
@@ -247,6 +290,28 @@ $email = $_SESSION["email"];
                     <div class="partylist-aksyon2">
                         <h2>YFP</h2>
                         <p>Youth for Progress</p>
+        
+                        <div class="popup" id="popup-FYP" >
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopupYFP()">&times;</div>
+                                <h1>Youth for Progress</h1>
+                                <p>Names: Alcantara <br> Banogon <br> Barroba
+
+                                    Instance: Implementing a "Suggestion Box" accessible both physically and online,
+                                    ensuring your voices are heard and valued.
+                                    Instance: Introducing monthly forums where we gather to discuss society matters,
+                                    allowing open dialogue and transparency in decision-making.
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <button onclick="togglePopupYFP()" id="togglePopupaksyon"
+                            style="background: #A9382A; position: absolute; margin-left: 130px; height: 35px; width: 100px; margin-top: 300px; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;">More
+                            info
+                        </button>
+                            
                     </div>
 
 
@@ -257,27 +322,10 @@ $email = $_SESSION["email"];
             </div>
         </section>
 
-        <!--========== VOTERS ==========-->
-        <section class="menu section bd-container" id="menu">
-            <span class="section-subtitle">Voters</span>
-            <h2 class="section-title">DASHBOARD</h2>
-
-            <div class="menu__container bd-grid">
-                <div class="menu__content">
-
-                </div>
-        </section>
+      
 
 
-        <!--========== CONTACT US ==========-->
-        <section class="contact section bd-container" id="contact">
-            <div class="contact__container bd-grid">
-                <div class="contact__data">
-
-                </div>
-        </section>
-    </main>
-
+   
     <!--========== FOOTER ==========-->
     <footer class="footer section bd-container">
         <div class="footer__container bd-grid">
