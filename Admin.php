@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Count participants who have voted
-$sqlParticipants = "SELECT COUNT(*) as count FROM users WHERE has_voted = 1";
+$sqlParticipants = "SELECT COUNT(DISTINCT user_id) as count FROM user_votes";
 $resultParticipants = $conn->query($sqlParticipants);
 
 if ($resultParticipants) {
@@ -35,7 +35,7 @@ if ($resultAccounts) {
 }
 
 // Count total casted votes
-$sqlCastedVotes = "SELECT COUNT(*) as count FROM votes"; // Assuming you have a 'votes' table
+$sqlCastedVotes = "SELECT COUNT(*) as count FROM user_votes";
 $resultCastedVotes = $conn->query($sqlCastedVotes);
 
 if ($resultCastedVotes) {
@@ -45,6 +45,25 @@ if ($resultCastedVotes) {
     echo "Error counting casted votes: " . $conn->error;
 }
 
+// Fetch voters who have cast their votes along with the candidates they voted for
+$sqlVotedUsers = "SELECT DISTINCT users.email, GROUP_CONCAT(candidates.name) as voted_candidates
+                  FROM users
+                  INNER JOIN user_votes ON users.id = user_votes.user_id
+                  INNER JOIN candidates ON user_votes.candidate_id = candidates.id
+                  GROUP BY users.email";
+$resultVotedUsers = $conn->query($sqlVotedUsers);
+
+if ($resultVotedUsers) {
+    $votedUsers = [];
+    while ($rowVotedUsers = $resultVotedUsers->fetch_assoc()) {
+        $votedUsers[] = $rowVotedUsers; // Store the entire row
+    }
+} else {
+    echo "Error fetching voted users: " . $conn->error;
+}
+
+
+$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,25 +85,13 @@ if ($resultCastedVotes) {
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="fas fa-bullhorn"></i>
-                    <span>Announce</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-user"></i>
-                    <span>Profile</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
+                <a href="Candidates.php">
                     <i class="fas fa-check"></i>
-                    <span>Voters</span>
+                    <span>Candidates</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="Registered.php">
                     <i class="fas fa-registered"></i>
                     <span>Registered</span>
                 </a>
@@ -93,12 +100,6 @@ if ($resultCastedVotes) {
                 <a href="#">
                     <i class="fas fa-cog"></i>
                     <span>Settings</span>
-                </a>
-            </li>
-            <li class="logout">
-                <a href="#">
-                    <i class="fas fa-sign-out"></i>
-                    <span>Logout</span>
                 </a>
             </li>
         </ul>
@@ -138,22 +139,20 @@ if ($resultCastedVotes) {
         </div>
 
         <div class="card-voters-email">
-            <i class="fa-solid fa-envelope"></i>
-            <h2>Voters' Emails</h2>
-            <?php
-            if (!empty($votedUsers)) {
-                echo "<ul>";
-                foreach ($votedUsers as $votedUser) {
-                    echo "<li>$votedUser</li>";
-                }
-                echo "</ul>";
-            } else {
-                echo "<p>No votes casted yet.</p>";
+        <i class="fa-solid fa-envelope"></i>
+        <h2>Voters' Emails</h2>
+        <?php
+        if (!empty($votedUsers)) {
+            echo "<ul>";
+            foreach ($votedUsers as $votedUser) {
+                echo "<li>{$votedUser['email']} voted for: {$votedUser['voted_candidates']}</li>";
             }
-            ?>
-        </div>
+            echo "</ul>";
+        } else {
+            echo "<p>No votes casted yet.</p>";
+        }
+        ?>
     </div>
-   
     
 </body>
 </html>

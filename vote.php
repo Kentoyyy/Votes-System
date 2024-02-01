@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start the session at the beginning of the script
+session_start();
 
 // Check if the user is not logged in, redirect to the login page
 if (!isset($_SESSION["email"])) {
@@ -27,19 +27,30 @@ if (isset($_POST['candidate_id'])) {
     $user_email = $_SESSION["email"];
 
     // Check if the user has already voted for this candidate
-    $checkVoteQuery = "SELECT * FROM votes WHERE user_email = '$user_email' AND candidate_id = '$candidate_id'";
+    $checkVoteQuery = "SELECT * FROM user_votes WHERE user_id IN (SELECT id FROM users WHERE email = '$user_email') AND candidate_id = '$candidate_id'";
     $checkVoteResult = $conn->query($checkVoteQuery);
 
     if ($checkVoteResult->num_rows > 0) {
         // User has already voted for this candidate
         echo "You have already voted for this candidate.";
     } else {
-        // Insert the vote into the votes table
-        $insertVoteQuery = "INSERT INTO votes (user_email, candidate_id) VALUES ('$user_email', '$candidate_id')";
-        if ($conn->query($insertVoteQuery) === TRUE) {
-            echo "Vote successfully counted!";
+        // Get the user ID
+        $getUserIDQuery = "SELECT id FROM users WHERE email = '$user_email'";
+        $userIDResult = $conn->query($getUserIDQuery);
+
+        if ($userIDResult->num_rows > 0) {
+            $row = $userIDResult->fetch_assoc();
+            $user_id = $row['id'];
+
+            // Insert the vote into the user_votes table
+            $insertVoteQuery = "INSERT INTO user_votes (user_id, candidate_id) VALUES ('$user_id', '$candidate_id')";
+            if ($conn->query($insertVoteQuery) === TRUE) {
+                echo "Vote successfully counted!";
+            } else {
+                echo "Error: " . $insertVoteQuery . "<br>" . $conn->error;
+            }
         } else {
-            echo "Error: " . $insertVoteQuery . "<br>" . $conn->error;
+            echo "Error getting user ID.";
         }
     }
 } else {
@@ -59,5 +70,7 @@ $conn->close();
 </head>
 
 <body>
-<a href="votes.php" class="nav__link">back</a>
-</body></html>
+    <a href="votes.php" class="nav__link">Back</a>
+</body>
+
+</html>

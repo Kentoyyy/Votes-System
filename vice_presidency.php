@@ -19,12 +19,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch candidates running for Presidency with their votes from the database
+// Fetch candidates running for Vice Presidency with their votes from the database
 $sql = "SELECT candidates.id, candidates.name, candidates.position, 
                COUNT(user_votes.candidate_id) AS voted 
         FROM candidates 
         LEFT JOIN user_votes ON candidates.id = user_votes.candidate_id 
-        WHERE candidates.position = 'Presidency'
+        WHERE candidates.position = 'Vice-President'
         GROUP BY candidates.id, candidates.name, candidates.position";
 $result = $conn->query($sql);
 
@@ -40,7 +40,6 @@ if ($result) {
 } else {
     echo "Error fetching candidates: " . $conn->error;
 }
-
 // Function to fetch and display counts
 function displayCounts() {
     $servername = "localhost";
@@ -127,18 +126,15 @@ $conn->close();
     </header>
 
     <div class="container-positions">
-
     <?php
         // Call the function to display counts
         displayCounts();
         ?>
-
     </div>
-        <!-- Your position-container, candidates-container, votersvoid-container, totalvoters-container, and dashboard elements go here -->
+    <!-- Your position-container, candidates-container, votersvoid-container, totalvoters-container, and dashboard elements go here -->
 
-        <h2 class="dashboard">DASHBOARD</h2>
-
-        <div class="left-container">
+    <h2 class="dashboard">DASHBOARD</h2>
+    <div class="left-container">
             <h2>Cast your Votes, Now!</h2>
             <div class="line"></div>
             <p>All your votes will be directed to tally votes. Thank you!</p>
@@ -180,51 +176,50 @@ $conn->close();
             </table>
         </div>
 
-        <div class="right-container">
-            <h2>Presidential Race!</h2>
-            <div class="line"></div>
-            <p>Here’s the candidates for running in President position!</p>
-            <table>
-                <thead>
-                    <tr style="color: #000; position: absolute; margin-top: 80px; margin-left: 40px; font-size: 14px;">
-                        <th>Rank</th>
-                        <th style="padding-left: 50px; padding-right: 140px;">Candidates</th>
-                        <th>Percent</th>
-                    </tr>
-                </thead>
-                <div class="progress-candidates">
-                    <table style="margin-top: 120px;">
-                        <tbody>
-                            <?php
-                            // Check if candidates array is not empty
-                            if (!empty($candidates)) {
-                                $rank = 1;
-                                foreach ($candidates as $row) {
-                                    echo "<tr>";
-                                    echo "<td>" . $rank . "</td>";
-                                    echo "<td>" . $row["name"] . "</td>";
+    <div class="right-container">
+        <h2>Vice Presidential Race!</h2>
+        <div class="line"></div>
+        <p>Here’s the candidates for running in Vice President position!</p>
+        <table>
+            <thead>
+                <tr style="color: #000; position: absolute; margin-top: 80px; margin-left: 40px; font-size: 14px;">
+                    <th>Rank</th>
+                    <th style="padding-left: 50px; padding-right: 140px;">Candidates</th>
+                    <th>Percent</th>
+                </tr>
+            </thead>
+            <div class="progress-candidates">
+                <table style="margin-top: 120px;">
+                    <tbody>
+                        <?php
+                        // Check if candidates array is not empty
+                        if (!empty($candidates)) {
+                            $rank = 1;
+                            foreach ($candidates as $row) {
+                                echo "<tr>";
+                                echo "<td>" . $rank . "</td>";
+                                echo "<td>" . $row["name"] . "</td>";
 
-                                    // Calculate percentage dynamically
-                                    $totalVotes = $row['voted'];
-                                    $totalVotesAll = array_sum(array_column($candidates, 'voted'));
-                                    $percentage = ($totalVotesAll > 0) ? round(($totalVotes / $totalVotesAll) * 100, 2) : 0;
+                                // Calculate percentage dynamically
+                                $totalVotes = $row['voted'];
+                                $totalVotesAll = array_sum(array_column($candidates, 'voted'));
+                                $percentage = ($totalVotesAll > 0) ? round(($totalVotes / $totalVotesAll) * 100, 2) : 0;
 
-                                    echo "<td><progress value='$percentage' max='100'></progress> $percentage%</td>";
-                                    echo "</tr>";
-                                    $rank++;
-                                }
-                            } else {
-                                echo "<tr><td colspan='3'>No candidates available</td></tr>";
+                                echo "<td><progress value='$percentage' max='100'></progress> $percentage%</td>";
+                                echo "</tr>";
+                                $rank++;
                             }
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
-            </table>
+                        } else {
+                            echo "<tr><td colspan='3'>No candidates available</td></tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <button class="view-button" onclick="window.location.href='vice_presidency.php'">View Vice Presidency</button>
     <button class="view-button" onclick="window.location.href='secretary.php'">View Secretary</button>
+    <button class="view-button" onclick="window.location.href='votes.php'">View Presidency</button>
     <button class="view-button" onclick="window.location.href='treasurer.php'">View treasurer</button>
 </body>
 
