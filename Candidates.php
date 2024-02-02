@@ -60,15 +60,19 @@ $conn->close();
 
     <style>
         form {
-            margin-top: 20px;
+            margin-top: 60px;
+            margin-left: 50px;
         }
 
         label {
-            display: block;
+          
+            margin-left: 100px;
             margin-bottom: 8px;
+            background-color: #289965;
         }
 
         input {
+           
             width: 100%;
             padding: 8px;
             margin-bottom: 12px;
@@ -78,6 +82,15 @@ $conn->close();
         .add-candidate-button {
             float: right;
             margin-right: 20px;
+            background-color: #289965;
+            text-decoration: none;
+            width: 200px;
+            height: 40px;
+            color: #fff;
+            padding:7px 20px 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 500;
         }
 
         .remove-candidate-button {
@@ -99,11 +112,15 @@ $conn->close();
             margin-left: 10px;
             font-weight: bold;
         }
+      
+
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="logo"></div>
+    <div class="logo">
+            <img src="/assets/img/votess_logo.png" style="width: 170px; height: 130px; position: absolute; margin-left: -25px; margin-top: -20px;" >
+        </div>
         <ul class="menu">
             <li>
                 <a href="admin.php">
@@ -148,8 +165,8 @@ $conn->close();
 
         <div class="container">
             <!-- Display existing candidates -->
-            <div class="card-candidates">
-                <i class="fa-solid fa-user-circle"></i>
+            <div class="card-candidates" style="background-color: #fff; width: 1000px; height: 550px; padding: 20px 30px 30px;   border-radius: 15px; position: absolute;    font-size: 17px;">
+                
                 <h2>Candidates</h2>
                 <?php
                 if (!empty($candidates)) {
@@ -168,9 +185,11 @@ $conn->close();
                 }
                 ?>
             </div>
-
-            <!-- Add Candidate button -->
+      
             <a href="add_candidate.php" class="add-candidate-button">Add Candidate</a>
+            
+            <!-- Add Candidate button -->
+            
         </div>
     </div>
 </body>

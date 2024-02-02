@@ -39,6 +39,12 @@ $conn->close();
     <title>Admin - Add Candidate</title>
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        .candidateName{
+            text
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">

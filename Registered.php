@@ -83,9 +83,9 @@ $conn->close();
         </div>
 
         <div class="container">
-            <div class="card-registered-accounts">
-                <i class="fa-solid fa-user-circle"></i>
-                <h2>Registered Accounts</h2>
+            <div class="card-registered-accounts" style="background-color: #fff; width: 900px; height: 400px; padding: 100px 30px 30px;   border-radius: 15px; position: absolute;    font-size: 17px;">>
+              
+                <h2 style=" color: #289965; margin-top: -80px;  font-size: 17px; position: absolute;">Registered Accounts</h2>
                 <?php
                 if (!empty($registeredAccounts)) {
                     echo "<ul>";

@@ -120,27 +120,27 @@ $conn->close();
         </div>
 
         <div class="container">
-        <div class="card-participation">
+        <div class="card-participation" style="margin-left: 930px;">
             <i class="fa-solid fa-check-circle"></i>
-            <h2>Participations</h2>
+            <h2>Voted</h2>
             <h3><?php echo $participantCount; ?></h3>
         </div>
 
-        <div class="card-accounts">
+        <div class="card-accounts" style="margin-left: 930px;">
             <i class="fa-solid fa-user-circle"></i>
             <h2>Accounts</h2>
             <h3><?php echo $accountCount; ?></h3>
         </div>
 
-        <div class="card-votes">
+        <div class="card-votes" style="margin-left: 930px;">
             <i class="fa-solid fa-check-circle"></i>
             <h2>Casted Votes</h2>
             <h3><?php echo $castedVotesCount; ?></h3>
         </div>
 
-        <div class="card-voters-email">
+        <div class="card-voters-email" style="background-color: #fff; width: 900px; height: 400px; padding: 100px 30px 30px;   border-radius: 15px; position: absolute;">
         <i class="fa-solid fa-envelope"></i>
-        <h2>Voters' Emails</h2>
+        <h2 style=" color: #289965; margin-top: -80px; position: absolute;">Voters' Emails</h2>
         <?php
         if (!empty($votedUsers)) {
             echo "<ul>";
