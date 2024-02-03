@@ -1,12 +1,6 @@
 <?php
 session_start(); // Start the session at the beginning of the script
 
-// Check if the user is not logged in, redirect to the login page
-if (!isset($_SESSION["email"])) {
-    header("Location: login.html");
-    exit();
-}
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -40,6 +34,7 @@ if ($result) {
 } else {
     echo "Error fetching candidates: " . $conn->error;
 }
+
 // Function to fetch and display counts
 function displayCounts() {
     $servername = "localhost";
@@ -108,49 +103,53 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Votes</title>
     <link rel="stylesheet" href="DashVoting.css">
+
 </head>
 
 <body>
     <header>
-        <img class="logo" src="assets/img/votes logo.png" alt="logo">
+        <img class="logo" src="assets/img/logoooo.png" alt="logo">
 
         <nav>
             <ul class="nav_links">
-                <li><a href="index2.php">Home</a></li>
-                <li><a href="index2.php">Vote</a></li>
-                <li><a href="index2.php">Candidates</a></li>
-                <li><a href="index2.php">FAQs & Help</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Vote</a></li>
+                <li><a href="Dashboard_Voting.php">Candidates</a></li>
+                <li><a href="index.html">FAQs & Help</a></li>
             </ul>
         </nav>
+
     </header>
 
     <div class="container-positions">
+
     <?php
         // Call the function to display counts
         displayCounts();
         ?>
-    </div>
-    <!-- Your position-container, candidates-container, votersvoid-container, totalvoters-container, and dashboard elements go here -->
 
+        </div>
+
+    </div>
     <h2 class="dashboard">DASHBOARD</h2>
     <div class="left-container">
-            <h2>Cast your Votes, Now!</h2>
-            <div class="line"></div>
-            <p>All your votes will be directed to tally votes. Thank you!</p>
+        <h2>Cast your Votes, Now!</h2>
+        <div class="line"></div>
+        <p>All your votes will be directed to tally votes. Thank you!</p>
 
-            <table>
-                <thead>
-                    <tr style="color: #000; position: absolute; margin-top: 75px; margin-left: 40px; font-size: 14px;">
-                        <th>Rank</th>
-                        <th style="padding-left: 110px; padding-right: 145px;">Candidates</th>
-                        <th>Vote</th>
-                    </tr>
-                </thead>
+        <table>
+            <thead>
+                <tr style="color: #000; position: absolute; margin-top: 75px; margin-left: 40px; font-size: 14px;">
+                    <th>Rank</th>
+                    <th style="padding-left: 110px; padding-right: 145px;">Candidates</th>
+                    <th>Vote</th>
+                </tr>
+            </thead>
 
-                <div class="candidates">
-                    <table style="margin-top: 100px;">
-                        <tbody>
-                            <?php
+            <div class="candidates">
+                <table style="margin-top: 100px;">
+                    <tbody>
+                    <?php
                             // Your PHP code for fetching and displaying candidates here
                             if (!empty($candidates)) {
                                 $rank = 1;
@@ -169,16 +168,23 @@ $conn->close();
                                 echo "<tr><td colspan='3'>No candidates available</td></tr>";
                             }
                             ?>
-                        </tbody>
-                    </table>
-                </div>
-            </table>
-        </div>
+                       
+                    </tbody>
+                </table>
+            </div>
+
+        </table>
+
+
+    </div>
+
+
 
     <div class="right-container">
-        <h2>Vice Presidential Race!</h2>
+        <h2>Vice Presidential, Race!</h2>
         <div class="line"></div>
         <p>Here’s the candidates for running in Vice President position!</p>
+
         <table>
             <thead>
                 <tr style="color: #000; position: absolute; margin-top: 80px; margin-left: 40px; font-size: 14px;">
@@ -187,39 +193,52 @@ $conn->close();
                     <th>Percent</th>
                 </tr>
             </thead>
+
             <div class="progress-candidates">
                 <table style="margin-top: 120px;">
                     <tbody>
-                        <?php
-                        // Check if candidates array is not empty
-                        if (!empty($candidates)) {
-                            $rank = 1;
-                            foreach ($candidates as $row) {
-                                echo "<tr>";
-                                echo "<td>" . $rank . "</td>";
-                                echo "<td>" . $row["name"] . "</td>";
+                    <?php
+                            // Check if candidates array is not empty
+                            if (!empty($candidates)) {
+                                $rank = 1;
+                                foreach ($candidates as $row) {
+                                    echo "<tr>";
+                                    echo "<td>" . $rank . "</td>";
+                                    echo "<td>" . $row["name"] . "</td>";
 
-                                // Calculate percentage dynamically
-                                $totalVotes = $row['voted'];
-                                $totalVotesAll = array_sum(array_column($candidates, 'voted'));
-                                $percentage = ($totalVotesAll > 0) ? round(($totalVotes / $totalVotesAll) * 100, 2) : 0;
+                                    // Calculate percentage dynamically
+                                    $totalVotes = $row['voted'];
+                                    $totalVotesAll = array_sum(array_column($candidates, 'voted'));
+                                    $percentage = ($totalVotesAll > 0) ? round(($totalVotes / $totalVotesAll) * 100, 2) : 0;
 
-                                echo "<td><progress value='$percentage' max='100'></progress> $percentage%</td>";
-                                echo "</tr>";
-                                $rank++;
+                                    echo "<td><progress value='$percentage' max='100'></progress> $percentage%</td>";
+                                    echo "</tr>";
+                                    $rank++;
+                                }
+                            } else {
+                                echo "<tr><td colspan='3'>No candidates available</td></tr>";
                             }
-                        } else {
-                            echo "<tr><td colspan='3'>No candidates available</td></tr>";
-                        }
-                        ?>
+                            ?>
+                        
+                        
                     </tbody>
                 </table>
             </div>
-        </div>
+
+        </table>
     </div>
-    <button class="view-button" onclick="window.location.href='secretary.php'">View Secretary</button>
-    <button class="view-button" onclick="window.location.href='votes.php'">View Presidency</button>
-    <button class="view-button" onclick="window.location.href='treasurer.php'">View treasurer</button>
+
+    
+    <button class="view-button" onclick="window.location.href='Dashboard_Voting.php'">View Presidency</button>
+    <button class="view-button" onclick="window.location.href='Dashboard_VotingS.php'">View Secretary</button>
+    <button class="view-button" onclick="window.location.href='Dashboard_VotingT.php'">View Treasurer</button>
+
+
+
+
+
+
+
 </body>
 
 </html>

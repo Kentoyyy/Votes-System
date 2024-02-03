@@ -119,7 +119,6 @@ $conn->close();
                 <li><a href="index2.php">Home</a></li>
                 <li><a href="index2.php">Vote</a></li>
                 <li><a href="index2.php">Candidates</a></li>
-                <li><a href="Dashboard_Voting.php">Election Result</a></li>
                 <li><a href="index2.php">FAQs & Help</a></li>
             </ul>
         </nav>
@@ -221,7 +220,7 @@ $conn->close();
             </div>
         </div>
     </div>
-                        
+
     <button class="view-button" onclick="window.location.href='vice_presidency.php'">View Vice Presidency</button>
     <button class="view-button" onclick="window.location.href='secretary.php'">View Secretary</button>
     <button class="view-button" onclick="window.location.href='votes.php'">View Presidency</button>

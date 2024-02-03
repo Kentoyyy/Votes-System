@@ -36,10 +36,28 @@ $conn->close();
     <title>Admin - Registered</title>
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+    <style>
+
+        .registered-accounts {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .account-item {
+            margin-bottom: 10px;
+        }
+
+        .no-accounts {
+            color: red;
+            font-style: italic;
+        }
+
+    </style>
 </head>
 <body>
 <div class="sidebar">
-        <div class="logo"></div>
+<div class="logo"><img src="votess_logo.png" style="width: 170px; height: 130px; position: absolute; margin-left: -25px; margin-top: -40px;" ></div>
         <ul class="menu">
             <li>
                 <a href="admin.php">
@@ -59,12 +77,7 @@ $conn->close();
                     <span>Registered</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-cog"></i>
-                    <span>Settings</span>
-                </a>
-            </li>
+           
         </ul>
     </div>
     <div class="main-content">
@@ -83,9 +96,13 @@ $conn->close();
         </div>
 
         <div class="container">
-            <div class="card-registered-accounts" style="background-color: #fff; width: 900px; height: 400px; padding: 100px 30px 30px;   border-radius: 15px; position: absolute;    font-size: 17px;">>
-              
-                <h2 style=" color: #289965; margin-top: -80px;  font-size: 17px; position: absolute;">Registered Accounts</h2>
+        <div class="card-registered-accounts" style="background-color: #fff; width: 900px; height: 400px; padding: 100px 30px 30px;   border-radius: 15px; position: absolute;    font-size: 17px;">
+       
+        <h2 style=" color: #289965; margin-top: -80px;  font-size: 22px; position: absolute;">Registered Accounts</h2>
+        <div class="names">
+            <h2 style="position: absolute; margin-top: -30px; font-size: 15px; color: #289965;  font-weight: 600;">Names</h2>
+            <h2 style="position: absolute; margin-top: -30px; margin-left: 150px; font-size: 15px; color: #289965;  font-weight: 600;">Email</h2>
+        </div>
                 <?php
                 if (!empty($registeredAccounts)) {
                     echo "<ul>";
